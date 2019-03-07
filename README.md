@@ -1,0 +1,1 @@
+This repo contains a minimal clone project of the Stack Overflow site.
