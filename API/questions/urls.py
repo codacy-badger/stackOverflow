@@ -2,5 +2,5 @@ from django.urls import path
 from .views import QuestionsView
 
 urlpatterns = [
-    path('', QuestionsView.as_view(), name="create")
+    path('', QuestionsView.as_view(), name="create_question")
 ]

@@ -16,7 +16,7 @@ class TestQuestions(TestCase):
 
     def test_create_questions(self):
         response = self.client.post(
-            reverse('create'),
+            reverse('create_question'),
             data=self.data,
             format="json"
         )
