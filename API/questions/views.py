@@ -8,3 +8,8 @@ from .serializers import QuestionsSerializer
 class QuestionsView(generics.ListCreateAPIView):
     serializer_class = QuestionsSerializer
     queryset = Question.objects.all()
+
+
+class QuestionsDetailsView(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = QuestionsSerializer
+    queryset = Question.objects.all()
