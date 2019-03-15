@@ -1,0 +1,17 @@
+language: Python 
+python: 
+  - "3.6"
+install: 
+  - pip install pipenv
+  - pipenv install
+  - pipenv install coveralls
+services:
+  - postgresql
+before_script:
+  - psql -c 'CREATE DATABASE stackoverflow;' -U postgres
+script:
+  - cd API/
+  - coverage run --source="." manage.py test
+  - coverage report
+after_success:
+  - coveralls
