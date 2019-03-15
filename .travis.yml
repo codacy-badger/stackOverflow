@@ -4,6 +4,7 @@ python:
 install: 
   - pip install pipenv
   - pipenv install
+  - pipenv install coveralls
 services:
   - postgresql
 before_script:
@@ -12,3 +13,5 @@ script:
   - cd API/
   - coverage run --source="." manage.py test
   - coverage report
+after_success:
+  - coveralls
