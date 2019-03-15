@@ -12,6 +12,7 @@ pylint = "*"
 pep8 = "*"
 python-decouple = "*"
 psycopg2-binary = "*"
+coverage = "*"
 
 [requires]
 python_version = "3.7"
